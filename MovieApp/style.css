@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: orangered;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.5rem;
+}
+
+.search {
+    border: 2px solid #d15913;
+    border-radius: 50px;
+    color: black;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    background-color: #df8517;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    margin: 1rem;
+    width: 300px;
+}
+
+.movie img {
+    max-width: 100%;
+}
+
+.movie-info {
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie h3 {
+    margin: 0;
+}
+
+.overview {
+    font-size: 15px;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.movie-info span {
+    background-color: rgb(158, 18, 158);
+    border-radius: 3px;
+    padding: 0.25rem 0.5rem;
+}
+
+.movie-info span.green {
+    background-color: green;
+}
+
+.movie-info span.orange {
+    background-color: orange;
+}
+
+.movie-info span.red {
+    background-color: red;
+}
