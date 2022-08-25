@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h2 id="question">Please enter your name:</h2>
+            <label for="fname">First name:</label>
+            <input type="text" id="storage" name="name" placeholder="Enter name..." ><br><br>
+            <div class="holder">
+            <button class="btn btn-success" onclick= {{checkGender(),checkNation()}}>Check</button>
+            </div>
+            <div class="col-md-4">
+            <p id="result" class="mt-3"></p>
+            <p id="answer" class="mt-3"></p>
+            </div>
+        <div class="reveal-info" id="reveal-info"> 
+            <p>Your gender is:</p>
+        
+
+    </div>
+</div>
+</body>
+<script> 
+        checkRepeat =()=> {
+            let name = document.getElementById("storage");
+            localStorage.setItem(name);
+            for(let i=1; i< localStorage.length; i++) {
+                if(localStorage[i] == name) {
+                    alert("please type new name");
+                } else {
+                    true;
+                }
+            }
+        }
+        checkLatin= ()=> {
+           var letterNumber = (/^[a-zA-Z]+$/);
+           let name = document.getElementById("storage").value;
+           if(name.match(letterNumber) ){
+            return true;
+             }else{ 
+             alert("wrong input format, sorry"); 
+             return false; }
+        }
+
+         function checkGender() {
+             if (checkLatin() == true) {
+            let name = document.getElementById("storage").value;
+            let result = document.getElementById("result");
+
+            fetch("https://api.genderize.io?name="+name)
+            .then(response=>response.json())
+            .then(data => {
+                let capitalName = capitalize(name);
+                result.innerHTML=capitalName+"'s gender is "+data["gender"];
+            }) 
+             } else {
+                 result.innerHTML="Wrong input format"
+             }
+         }
+        function checkNation() {
+            if(checkLatin() == true) {
+            let name = document.getElementById("storage").value;
+            let answer = document.getElementById("answer");
+            fetch("https://api.nationalize.io/?name="+name)
+            .then(response=>response.json())
+            .then(info => {
+                let capitalName = capitalize(name);
+                let text = info.country[0].country_id;
+                answer.innerHTML=(name + " is from " + text);
+            })
+         } else {
+             answer.innerHTML="Wrong input format"
+         }
+        }
+            function capitalize(str) {
+            return str[0].toUpperCase()+str.slice(1);
+        }
+
+   
+
+    </script>
+
+</html>
