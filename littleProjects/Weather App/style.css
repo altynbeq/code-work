@@ -1,0 +1,223 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(23, 100, 183);
+}
+
+.container {
+    border-radius: 7px;
+    width: 500px;
+    min-height: 350px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px 20px;
+    background-color: whitesmoke;
+}
+
+.weatherSrch.hide {
+    display: none;
+}
+
+.infoText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    font-size: 22px;
+    font-weight: 300;
+    height: 45px;
+    width: 80%;
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.separ {
+    height: 1px;
+    background-color: grey;
+    width: 100%;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoText.error {
+    background-color: red;
+    opacity: 0.7;
+}
+
+.infoText.pending {
+    background-color: rgb(27, 141, 27);
+    opacity: 0.7;
+}
+
+.wrapper h1 {
+    color: rgb(19, 19, 126);
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+.wrapper input {
+    height: 45px;
+    min-width: 80%;
+    font-size: 25px;
+    border-radius: 7px;
+    text-align: center;
+    border: 1px solid grey;
+    margin: 15px 15px 15px;
+}
+
+.locationBttn {
+    cursor: pointer;
+    background-color: rgb(29, 44, 142);
+    min-width: 80%;
+    font-size: 20px;
+    color: whitesmoke;
+    height: 45px;
+    border-radius: 7px;
+    margin: 15px 15px 15px;
+}
+
+.wrapper .separator {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 1px;
+    background-color: gray;
+    width: 100%;
+}
+
+.separator::before {
+    content: "or";
+    background-color: whitesmoke;
+}
+
+.srchBttn {
+    background-color: rgb(29, 44, 142);
+    min-width: 20%;
+    cursor: pointer;
+    font-size: 16px;
+    color: whitesmoke;
+    height: 45px;
+    border-radius: 25px;
+    margin: 15px 0;
+}
+
+.infoTop img {
+    margin: 15px 15px 15px;
+    max-width: 25%;
+}
+
+.infoTop .degree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 100;
+    margin-bottom: 15px;
+}
+
+.infoTop .skyInfo {
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.infoTop .location {
+    display: flex;
+    font-size: 18px;
+    font-weight: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.infoBottom .separHigh {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: -24px;
+    width: 1px;
+    height: 80px;
+    background-color: grey;
+}
+
+.infoBottom .infoBottomLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.feelsLike,
+.humidity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feelsLike h2 {
+    font-size: 26px;
+    font-weight: 300;
+}
+
+.iconify {
+    font-size: 30px;
+}
+
+.infoBottom .infoBottomRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.infoBottom .infoBottomRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.infoBottomRight .humidity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.humidity h3 {
+    font-size: 26px;
+    font-weight: 300;
+}
+
+p {
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+}
+
+.weatherInfo.hide {
+    display: none;
+}
