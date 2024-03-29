@@ -22,6 +22,7 @@ import {
     gitHubProject,
     shopify,
     carrent,
+    euroVista,
     jobit,
     zoomia,
     tripguide,
@@ -172,9 +173,9 @@ import {
   
   const projects = [
     {
-      name: "Cocktails App",
+      name: "EuroVista Website",
       description:
-        "🍹 Cocktail Showcase: Vividly presented cocktails with recipes. 🔗 Dynamic Navigation: Effortless exploration using React Router. 🔄 Global State Management: Consistent user interface with useContext. 🌐 Asynchronous Data Fetching: Up-to-date content with Fetch API and useEffect. 🚀 Enhanced User Experience: Smooth interactions powered by useRef.",
+        "I spearheaded the development of a comprehensive website for a company specializing in facilitating individuals' relocation to the EU while offering extensive support in securing employment opportunities. The platform serves as a pivotal resource, guiding users through the intricacies of international relocation and job placement processes.",
       tags: [
         {
           name: "React.js",
@@ -185,15 +186,11 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "Rest API",
+          name: "TailwindCSS",
           color: "green-text-gradient",
         },
-        {
-          name: "CSS",
-          color: "pink-text-gradient",
-        },
       ],
-      image: carrent,
+      image: euroVista,
       source_code_link: "https://github.com/altynbeq/cocktails-app-react",
     },
     {

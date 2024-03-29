@@ -38,6 +38,7 @@ import MoviesApp from './projects/moviesApp.png'
 import StripeApp from './projects/stripeApp.png'
 import cartApp from './projects/cartApp.png'
 import cApp from './projects/cApp.png'
+import euroVista from './projects/euroVista.png'
 
 export {
   logo,
@@ -76,5 +77,6 @@ export {
   MoviesApp,
   StripeApp,
   cartApp,
-  cApp
+  cApp,
+  euroVista
 };
